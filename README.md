@@ -2,6 +2,8 @@
 
 **Serapeo** is a secondary repository that allows you to extend any public repository, and use your specific metadata instead of - or in addition to - metadata provided by them.
 
+Learn more about this project and its intentions checking our [Open Planvas](meta/open_planvas.pdf)
+
 ## Description
 
 When you use a public repository for your organization research results, you have to accept the metadata they provide. **Serapeo** is designed to maintain 
