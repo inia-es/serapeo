@@ -5,7 +5,9 @@
   <form action="" method=post>
     <input type=text name=account value="{{ account }}" class=nameinput>
     <input type=password name=pwd class=pwdinput>
-    <input type=submit value="Login">
+    {% for login_plugin in login_plugins %}
+      <input type=submit value="Use {{ login_plugin }}">
+    {% endfor %}
   </form>
 {% endblock %}
 

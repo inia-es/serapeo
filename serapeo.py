@@ -4,6 +4,7 @@ from werkzeug.wrappers import Request, Response
 from werkzeug.routing import Map, Rule
 from werkzeug.exceptions import HTTPException
 from jinja2 import Environment, FileSystemLoader
+import plugins
 
 class Serapeo(object):
 
@@ -39,7 +40,7 @@ class Serapeo(object):
         url = ''
         if request.method == 'GET':
             print(plugins.get_auth_plugins())
-            return self.render_template('login.html')
+            return self.render_template('login.html', login_plugins = plugins.get_auth_plugins())
 
 
 def create_app(with_static=True):
