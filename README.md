@@ -1,4 +1,4 @@
-# Serapeo
+# :page_facing_up: :open_file_folder: Serapeo :ox: :european_post_office: :ox:
 
 **Serapeo** is a secondary repository that allows you to extend any public repository, and use your specific metadata instead of - or in addition to - metadata provided by them.
 
@@ -26,6 +26,6 @@ Our first goal is syncing with Zenodo, so we need access to http://sanbox.zenodo
 
 ## Why **Serapeo**?
 
-This project is developed to extend [Zenodo](http://github.com/zenodo/zenodo) what is called after *Zenodotus* the first librarian using metadata in the Great Library of Alexandria. **Serapeo** is called after the *Serapeum* the secondary library of the Great Library of Alexandria, where many items where copied and saved after the great fire.
+This project is developed to extend [Zenodo](http://github.com/zenodo/zenodo) what is called after *Zenodotus* the first librarian using metadata in the Great Library of Alexandria. **Serapeo** is called after the *Serapeum*: the secondary library of the Great Library of Alexandria, where many items where copied and saved after the great fire.
 
-Furthermore, that *Serapeum* was the temple of *Serapis*, a syncretistic deity of Alexandria, with attributes of Egypcian and Greek deities, designed on purpouse to join people from both cultures in a multi-ethnic city.  
+Furthermore, that *Serapeum* was the temple of *Serapis*, a syncretistic deity of Alexandria, with attributes of Egyptian and Greek deities, designed on purpouse to join people from both cultures in a multi-ethnic city.  
