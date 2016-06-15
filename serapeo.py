@@ -39,8 +39,8 @@ class Serapeo(object):
         error = None
         url = ''
         if request.method == 'GET':
-            print(plugins.get_auth_plugins())
-            return self.render_template('login.html', login_plugins = plugins.get_auth_plugins())
+            login_plugins = map ((lambda p: p.create_plugin().name), plugins.get_auth_plugins())
+            return self.render_template('login.html', login_plugins = login_plugins)
 
 
 def create_app(with_static=True):
