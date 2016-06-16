@@ -2,11 +2,11 @@
 {% block title %}Login{% endblock %}
 {% block body %}
   <h2>Login</h2>
-  <form action="" method=post>
+  <form action="/login" method=post>
     <input type=text name=account value="{{ account }}" class=nameinput>
     <input type=password name=pwd class=pwdinput>
     {% for login_plugin in login_plugins %}
-      <input type=submit value="Use {{ login_plugin }}">
+      <input type=submit name="auth_plugin" value="{{ login_plugin.name }}">Use {{ login_plugin.description }}</input>
     {% endfor %}
   </form>
 {% endblock %}
