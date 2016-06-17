@@ -1,12 +1,17 @@
-import plugins
+"""Serapeo app
+
+Serapeo is a Flask-based ETL tool for sync metadata in differents repositories
+"""
+
 import flask
 import auth.controller
 
-app = flask.Flask(__name__)
+APP = flask.Flask(__name__)
 
-@app.route("/login", methods=['GET', 'POST'])
+@APP.route("/login", methods=['GET', 'POST'])
 def on_login():
+    """Call login controller"""
     return auth.controller.login(flask.request)
 
 if __name__ == '__main__':
-    app.run()
+    APP.run()

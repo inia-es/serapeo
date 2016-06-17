@@ -1,25 +1,30 @@
+"""Controller for login
+
+This controller solves authentification to the system, shows login page and
+call the right auth plugin in order to grant accesss
+"""
 import plugins
 import flask
 
-def _get(request):
-    login_plugins = map ((lambda p: p.create_plugin()), plugins.get_auth_plugins())
-    return flask.render_template('login.html', login_plugins = login_plugins)
+def _get():
+    login_plugins = [p.create_plugin() for p in plugins.get_auth_plugins()]
+    return flask.render_template('login.html', login_plugins=login_plugins)
 
 def _post(request):
     plugin_name = request.form['auth_plugin']
     auth_plugin = plugins.get_auth_plugin(plugin_name)
-    if auth_plugin == False:
-        return _get(request)
+    if auth_plugin is False:
+        return _get()
     else:
         flat_form = dict(request.form.items())
         result = auth_plugin.create_plugin().validate(**flat_form)
-        if result == False:
-             return 'Login error'
+        if result is False:
+            return 'Login error'
         else:
-             return 'User: ' + result
+            return 'User: ' + result
 
 def login(request):
     if request.method == 'GET':
-        return _get(request)
+        return _get()
     if request.method == 'POST':
         return _post(request)

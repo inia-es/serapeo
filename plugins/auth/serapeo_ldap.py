@@ -1,5 +1,5 @@
 import plugins.auth
-import ldap 
+import ldap
 
 def create_plugin():
     return LDAP()
@@ -17,7 +17,7 @@ class LDAP(plugins.auth.AuthPlugin):
         conn.set_option(ldap.OPT_REFERRALS, 0)
         try:
             conn.simple_bind_s(account, pwd)
-            conn.unbind
+            conn.unbind()
             return account
-        except Exception, error:
-            return False 
+        except Exception:
+            return False
