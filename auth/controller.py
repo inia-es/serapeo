@@ -7,7 +7,7 @@ import plugins
 import flask
 
 def _get():
-    login_plugins = [p.create_plugin() for p in plugins.get_auth_plugins()]
+    login_plugins = plugins.get_auth_plugins()
     return flask.render_template('login.html', login_plugins=login_plugins)
 
 def _post(request):
@@ -17,7 +17,7 @@ def _post(request):
         return _get()
     else:
         flat_form = dict(request.form.items())
-        result = auth_plugin.create_plugin().validate(**flat_form)
+        result = auth_plugin.validate(**flat_form)
         if result is False:
             return 'Login error'
         else:

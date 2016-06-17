@@ -15,9 +15,3 @@ def get_auth_plugins():
 def get_auth_plugin(plugin_name):
     plugin_tuple = imp.find_module(plugin_name, [_AUTH_PATH])
     return imp.load_module(plugin_name, plugin_tuple[0], plugin_tuple[1], plugin_tuple[2])
-
-class Plugin(object):
-    def __init__(self):
-        self.name = 'No name'
-        self.description = 'No description'
-
