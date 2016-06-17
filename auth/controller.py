@@ -11,7 +11,8 @@ def _post(request):
     if auth_plugin == False:
         return _get(request)
     else:
-        result = auth_plugin.create_plugin().validate(request.form)
+        flat_form = dict(request.form.items())
+        result = auth_plugin.create_plugin().validate(**flat_form)
         if result == False:
              return 'Login error'
         else:
