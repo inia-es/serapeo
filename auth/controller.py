@@ -24,6 +24,7 @@ def _post(request):
             return 'User: ' + result
 
 def login(request):
+    """Solve GET or POST requests"""
     if request.method == 'GET':
         return _get()
     if request.method == 'POST':

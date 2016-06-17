@@ -1,9 +1,11 @@
+"""Check valid users in a LDAP server"""
 import ldap
 
 NAME = 'serapeo_ldap'
 DESCRIPTION = 'LDAP'
 
 def validate(account, pwd, **kwargs):
+    """Return account name for valid users in LDAP, or False elsewhere"""
     if not account.find('@'):
         account += '@inia.es'
     conn = ldap.initialize('ldap://server')
@@ -13,5 +15,5 @@ def validate(account, pwd, **kwargs):
         conn.simple_bind_s(account, pwd)
         conn.unbind()
         return account
-    except Exception:
+    except ldap.INVALID_CREDENTIALS:
         return False
