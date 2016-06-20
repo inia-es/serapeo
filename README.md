@@ -17,7 +17,7 @@ Extendable first is the main concept after **Serapeo**'s design. Plugins for som
 To be done. Come back soon to check when the first alpha version (a prototype maybe) has been released.
 
 ## Contributing
-**Serapeo** is a work-in-progress in a very preliminar stage. Soon after we release our first alpha or prototype we'll tell you how to participate in the project.
+**Serapeo** is a work-in-progress in a very preliminary stage. Soon after we release our first alpha or prototype we'll tell you how to participate in the project.
 
 In any case, feel free to contact us if you feel you can help to improve the project in any way.
 
